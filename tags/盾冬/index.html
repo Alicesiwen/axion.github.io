@@ -6,6 +6,8 @@
   <title>tag: 盾冬 | 南瓜的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   
+    <meta name="keywords" content="盾冬, 桃包" />
+  
   
   
   
@@ -112,7 +114,7 @@
                 
                   <li> <a class="main-nav-link" href="/archives">Archives</a> </li>
                 
-                  <li> <a class="main-nav-link" href="/categories">Categories</a> </li>
+                  <li> <a class="main-nav-link" href="/Categories">Categories</a> </li>
                 
                   <li> <a class="main-nav-link" href="/tags">Tags</a> </li>
                 
@@ -171,66 +173,25 @@
             
       <div id="content" class="outer">
         
-          <section id="main" style="float:none;">
-  
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <h1><a href="/archives/2020" class="archive-year">2020</a></h1>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      
-	<a href="/2020/06/09/%E5%A6%82%E4%BD%95%E6%95%99%E9%92%A2%E9%93%81%E4%BE%A0language%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/" class="archive-article-date">
-	  <time datetime="2020-06-09T04:41:59.359Z" itemprop="datePublished">2020-06-09</time>
-	</a>
+          <section id="main" style="float:none;">{% extends 'includes/layout.swig' %}
 
-      
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2020/06/09/%E5%A6%82%E4%BD%95%E6%95%99%E9%92%A2%E9%93%81%E4%BE%A0language%E7%9A%84%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E5%BC%8F/">如何叫钢铁侠language的正确使用方法</a>
-    </h1>
-  
-
-    </header>
+{% block body %}
+  <div id="tag">
+    <h1>{{ page.tag }}</h1>
+    {% for postItem in site.posts.toArray() %}
+      {% set isShow = false %}
+      {% for tag in postItem.tags %}
+        {% if tag.name === page.tag %}
+          {% set isShow = true %}
+        {% endif %}
+      {% endfor %}
+      {% if isShow %}
+      {% include 'includes/post-title-item.swig' %}
+      {% endif %}
+    {% endfor %}
   </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      
-	<a href="/2020/06/09/Bucky%E5%92%8CSteve%E6%9C%80%E8%BF%91%E6%80%AA%E6%80%AA%E7%9A%84%E3%80%90%E9%98%9F%E9%95%BF%E7%94%9F%E8%B4%BA%EF%BC%8C%E4%B8%80%E5%8F%91%E5%AE%8C%E3%80%91/" class="archive-article-date">
-	  <time datetime="2020-06-09T04:36:53.046Z" itemprop="datePublished">2020-06-09</time>
-	</a>
 
-      
-  
-    <h1 class="thumb" itemprop="name">
-      <a class="archive-article-title" href="/2020/06/09/Bucky%E5%92%8CSteve%E6%9C%80%E8%BF%91%E6%80%AA%E6%80%AA%E7%9A%84%E3%80%90%E9%98%9F%E9%95%BF%E7%94%9F%E8%B4%BA%EF%BC%8C%E4%B8%80%E5%8F%91%E5%AE%8C%E3%80%91/">Bucky和Steve最近怪怪的</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-
-</section>
+  {# {% include 'includes/pagination.swig' %} #}</section>
         
       </div>
       
@@ -276,7 +237,7 @@
   
     <a href="/archives" class="mobile-nav-link">Archives</a>
   
-    <a href="/categories" class="mobile-nav-link">Categories</a>
+    <a href="/Categories" class="mobile-nav-link">Categories</a>
   
     <a href="/tags" class="mobile-nav-link">Tags</a>
   

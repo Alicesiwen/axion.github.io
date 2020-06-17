@@ -1,548 +1,326 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<!-- Head tag -->
+<!DOCTYPE HTML>
+<html>
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Just a place for writing.">
-    <meta name="keyword" content="">
-    <meta name="theme-color" content="#600090">
-    <meta name="msapplication-navbutton-color" content="#600090">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="#600090">
-    <link rel="shortcut icon" href="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png">
-    <link rel="alternate" type="application/atom+xml" title="南瓜的博客" href="/atom.xml">
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.css">
-    <title>
-        
-        
-        
-    </title>
-
-    <link rel="canonical" href="https://axionpumpkin.github.io/">
-
-    <!-- Bootstrap Core CSS -->
+	<meta charset="utf-8">
     
-<link rel="stylesheet" href="/css/bootstrap.min.css">
-
-
-    <!-- Custom CSS -->
+	<title>南瓜的博客</title>
+    <meta name="author" content="南瓜">
     
-<link rel="stylesheet" href="/css/blog-style.css">
+	<meta name="description" content=""> <!-- TODO: truncate -->
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
+	<link href="atom.xml" rel="alternate" title="南瓜的博客" type="application/atom+xml">
+	<link href="/favicon.ico" rel="shortcut icon">
+    <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/hljs.css" media="screen, projection" rel="stylesheet" type="text/css">
 
-    <!-- Pygments Github CSS -->
+    <link href='//fonts.googleapis.com/css?family=Slackey' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Amethysta' rel='stylesheet' type='text/css'>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![}]-->
+
+    <script type="text/javascript" src="/javascripts/jquery-tapir.js"></script>
+
+    <!-- remove or comment it to disable ajaxification -->   
+    <!-- <script src="/javascripts/ajaxify.js"></script> -->
+
     
-<link rel="stylesheet" href="/css/syntax.css">
+
+    
 
 <meta name="generator" content="Hexo 4.2.1"></head>
 
-<style>
 
-    header.intro-header {
-        background-image: url('')
-    }
-</style>
-<!-- hack iOS CSS :active style -->
-<body ontouchstart="" class="animated fadeIn">
-<!-- Navigation -->
-<nav class="navbar navbar-default navbar-custom navbar-fixed-top " id="nav-top" data-ispost = "false" data-istags="false
-" data-ishome = "true" >
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header page-scroll">
-            <button type="button" class="navbar-toggle">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand animated pulse" href="/">
-                <span class="brand-logo">
-                    南瓜的博客
-                </span>
-                's Blog
-            </a>
-        </div>
-
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <!-- Known Issue, found by Hux:
-            <nav>'s height woule be hold on by its content.
-            so, when navbar scale out, the <nav> will cover tags.
-            also mask any touch event of tags, unfortunately.
-        -->
-        <!-- /.navbar-collapse -->
-        <div id="huxblog_navbar">
-            <div class="navbar-collapse">
-                <ul class="nav navbar-nav navbar-right">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-					
-                    
-                        
-							
-                        <li>
-                            <a href="/tags/">tags</a>
-                        </li>
-							
-						
-                    
-					
-					
-                </ul>
-            </div>
-        </div>
+<body>
+    <div id="wrapper">
+    <header id="header" class="inner"><!-- for more effects see _animate.scss -->
+<h1 class="animated bounceInDown">
+    <div id="headerbg">
+        南瓜的博客
     </div>
-    <!-- /.container -->
-</nav>
-<script>
-    // Drop Bootstarp low-performance Navbar
-    // Use customize navbar with high-quality material design animation
-    // in high-perf jank-free CSS3 implementation
-//    var $body   = document.body;
-    var $toggle = document.querySelector('.navbar-toggle');
-    var $navbar = document.querySelector('#huxblog_navbar');
-    var $collapse = document.querySelector('.navbar-collapse');
+</h1>
+<span class="subtitle">Axion&#39;s Blog</span>
+<br>
 
-    $toggle.addEventListener('click', handleMagic)
-    function handleMagic(e){
-        if ($navbar.className.indexOf('in') > 0) {
-        // CLOSE
-            $navbar.className = " ";
-            // wait until animation end.
-            setTimeout(function(){
-                // prevent frequently toggle
-                if($navbar.className.indexOf('in') < 0) {
-                    $collapse.style.height = "0px"
-                }
-            },400)
-        }else{
-        // OPEN
-            $collapse.style.height = "auto"
-            $navbar.className += " in";
-        }
-    }
-</script>
-
-<!-- Main Content -->
-
-
-<style>
-
-    .custom-haojen-container .post-preview:nth-of-type(1),
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
-        text-align: center;
-        background-repeat: no-repeat;
-        border-radius: 3px;
-        background-size: cover;
-        padding: 0;
-        height: 300px;
-        display: table;
-        width: 100%;
-        background-color: rgba(0, 0, 0, 0.16);
-    }
-
-    /*去掉诗歌的背景图片*/
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) {
-        background-image: none !important;
-        background-color: rgba(255, 248, 220, 0.5);
-    }
-
-    .custom-haojen-container .post-preview:nth-child(1) h2,
-    .custom-haojen-container .post-preview:nth-child(1) .post-meta,
-    .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-        text-shadow: 0 0 40px rgba(0, 0, 0, 1);
-        letter-spacing: 1px;
-        color: #fff;
-        margin-top: 0;
-        padding-left: 60px;
-        padding-right: 60px;
-    }
-
-    .custom-haojen-container .post-preview:nth-child(1) .post-meta {
-        font-size: .9em;
-        font-weight: 300;
-        margin-top: 0;
-    }
-
-    .custom-haojen-container .post-preview-poetry:nth-child(1) .post-subtitle {
-        letter-spacing: 6px;
-        font-size: 18px;
-        font-family: unset;
-        font-weight: 400;
-        color: rgba(0, 0, 0, .75)
-    }
-
-    /*不显示摘要*/
-    .custom-haojen-container .post-preview:nth-child(1) .post-content-preview {
-        display: none
-    }
-
-    /*只第一个显示背景图片*/
-    .custom-haojen-container .post-preview:not(:nth-child(1)) {
-        background-image: none !important;
-    }
-
-    /*第一个分界线去掉*/
-    .custom-haojen-container hr:nth-of-type(1) {
-        display: none;
-    }
-
-    /*主题*/
-    .custom-haojen-container .post-preview:nth-of-type(1) > a {
-        display: table-cell;
-        vertical-align: middle;
-    }
-
-    /*诗词标题*/
-    .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-        font-size: 35px;
-        font-family: STKaiti;
-        color: rgba(0, 0, 0, .8);
-    }
-
-    .custom-haojen-container .post-preview-poetry:nth-of-type(1) .post-meta {
-        color: #0e2231;
-    }
-
-    @media (max-width: 768px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 240px;
-        }
-
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 28px !important;
-            margin-top: 0;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 18px;
-            font-weight: 400;
-            padding-left: 0;
-            padding-right: 0;
-        }
-
-        .custom-haojen-container .post-preview:nth-of-type(1) > a {
-            padding: 20px
-        }
-    }
-
-    /*手机屏幕*/
-    @media (max-width: 400px) {
-        .custom-haojen-container .post-preview:nth-child(1) {
-            height: 195px;
-        }
-
-        .custom-haojen-container .post-preview-poetry:nth-child(1) h2 {
-            font-size: 20px !important;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) .post-subtitle {
-            font-size: 16px;
-        }
-
-        .custom-haojen-container .post-preview:nth-child(1) a {
-            padding: 30px 20px;
-        }
-    }
-</style>
-
-<!-- Page Header -->
-<div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 visible-xs-block visible-sm-block">
-    <div class="row">
-        <header class="intro-header">
-            <div class="container">
-                <div class="site-heading text-center">
-                    <div class="about-me">
-                        <!--移动端头部显示-->
-                        <img src=""/>
-                        <h5><a href="/about/">南瓜</a></h5>
-                        <p></p>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </div>
-</div>
-<!-- Main Content -->
-<div class="container custom-haojen-container">
-    <!-- Post Container -->
-    <div class="row">
-        <div class="col-lg-8 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-12 col-xs-12 post-container">
-            <!-- Main Content -->
-
-
-
-<div class="post-preview "
-     style="background-image: url('')">
-    <a href="/2020/06/09/【桃包】初吻(一)/">
-        <h2 class="post-title">
-            初吻
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-09
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                第一章*大概ooc
-Chris十五岁的夏天，他妈妈决定让他自己去夏令营。
-在每个小孩的暑假里，夏令营大概是最好玩的事情。既不用听爸妈唠叨，还能跟朋友一起住一起玩，简直不能再美妙。但是Chris一点也不喜欢，一点也不。
-每年Chris都觉得，今年的夏令营一定很好玩，自己绝对没问题，然后百分之百会在..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('')">
-    <a href="/2020/06/09/【桃包】不是男朋友啦/">
-        <h2 class="post-title">
-            不是男朋友啦
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-09
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                •包生日梗，今天突然想到的哈哈哈哈
-Chris刚挂断他跟世界上最甜蜜的小孩的视频，就接到了经纪人的电话，千叮咛万嘱咐他不要给Sebastian发生贺，再加上什么我好爱这个人啊，这个人好甜的配文。
-他皱着眉头说着好啊好啊地答应了经纪人，然后不爽的挂了电话。
-“可是他就是很甜啊……”Chris心里想..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('')">
-    <a href="/2020/06/09/如何教钢铁侠language的正确使用方式/">
-        <h2 class="post-title">
-            如何叫钢铁侠language的正确使用方法
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-09
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                沙雕段子这是一个俄语的梗，空间看到的。说是川普跟普京会谈的时候普京说了事实（Факт）这个词，听起来像骂人哈哈哈哈哈哈哈。
-
-美国队长没有一刻，比现在更恨九头蛇。
-他们显然没给巴基带来什么好东西，史蒂夫坚定的想，特别是语言这方面。
-他现在宁可再把叉骨和红骷髅从地狱里拖出来再打一遍，也不想面对巴基..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-<div class="post-preview "
-     style="background-image: url('')">
-    <a href="/2020/06/09/Bucky和Steve最近怪怪的【队长生贺，一发完】/">
-        <h2 class="post-title">
-            Bucky和Steve最近怪怪的
-        </h2>
-        <p class="post-meta">
-            <i class="fa fa-calendar" aria-hidden="true"></i> 2020-06-09
-        </p>
-        
-        <div class="post-content-preview">
-            <p>
-                队三和无线战争之间
-轻微ooc
-
-Steve觉得Bucky最近怪怪的。
-他俩以前每天都视频，有的时候还会看看Bucky的小羊，但是这两周Bucky说有事，不能视频了。他跟特查拉联系了，确认过他没给Bucky安排任务。
-这就奇怪了，Bucky除了放羊，玩孩子，和被孩子玩还有什么事。难道是自己胡子太..
-            </p>
-        </div>
-    </a>
-
-</div>
-
-<hr>
-
-
-
-
-<!-- 翻页 pager -->
-
-<ul class="pager">
-    
-    
+<ul id="social-links" style="text-align:center; clear:both;">
+  
+  
+  
+  
+  
+  
+  
+  
 </ul>
 
 
-        </div>
-        <!-- Sidebar Container -->
-        <div class="
-                col-lg-3 col-lg-offset-0
-                col-md-3 col-md-offset-0
-                col-sm-12
-                col-xs-12
-                sidebar-container
-            ">
-
-            <!-- About Me -->
-            <section class="visible-md visible-lg" style="padding: 0 18px">
-                <div class="short-about">
-                    <!--侧边栏头像-->
-                    
-                    <h5><a href="/about/">南瓜</a></h5>
-                    
-                    <hr>
-                    <!-- SNS Link 社交 -->
-                    <ul class="list-inline">
-                        
-                        
-                        
-
-                        
-
-                        
-
-                        
-
-                        
-                    </ul>
-                </div>
-            </section>
-
-            <!-- Featured Tags  标签 -->
-            
-
-            
-
-        </div>
+<!-- use full url including 'index.html' for navigation bar if you are using ajax -->
+<ul id="nav">
+	<li id="ajax"><a href="/index.html">Home</a></li>
+	<li id="ajax"><a href="/archives/index.html">Archives</a></li>
+	<li id="ajax"><a href="/tags/index.html">Tags</a></li>
+    <li><a href="/atom.xml">RSS</a></li>
+    
+    <li>
+    <div id="dark">
+        <form action="//www.google.com.hk/search" method="get" accept-charset="UTF-8" id="search">
+            <input type="hidden" name="sitesearch" value="https://axionpumpkin.github.io" />
+            <input type="text" name="q" results="0" placeholder="Search..." x-webkit-speech />
+        </form>
     </div>
+    </li>
+        
+</ul>
+
+
+
+
+</header>
+
+<div id="toload">
+<!-- begin toload -->
+    <div id="content" class="inner">
+        
+
+
+
+  <article class="post">
+	<h2 class="title">
+		<a href="2020/06/09/【桃包】初吻(一)/">初吻</a>
+	</h2>
+    <div class="entry-content">
+    <div class="meta">
+      <div class="date">Published on: <time datetime="2020-06-09T04:44:09.853Z" itemprop="datePublished">Jun 9, 2020</time>
+</div>
+      <div class="tags">Tags: 
+
+<a href="/tags/桃包/">桃包</a>
+</div>
+    </div>
+      
+        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>*大概ooc</p>
+<p>Chris十五岁的夏天，他妈妈决定让他自己去夏令营。</p>
+<p>在每个小孩的暑假里，夏令营大概是最好玩的事情。既不用听爸妈唠叨，还能跟朋友一起住一起玩，简直不能再美妙。但是Chris一点也不喜欢，一点也不。</p>
+<p>每年Chris都觉得，今年的夏令营一定很好玩，自己绝对没问题，然后百分之百会在路上哭闹着要回家。</p>
+<p>Chris觉得有点委屈，太过于恋家又不是他的错，家里有弟弟可以欺负，饭菜也好吃，去夏令营一点意义都没有。但是一个十五岁的男子汉不能向妈妈哭鼻子，求她让自己待在家里，Chris只好收拾好行李，气鼓鼓地准备去夏令营待上半个月。</p>
+<p>Chris登上了巴士。一点也不开心，他想，在家睡觉都比去夏令营好玩。他挑了一个窗边的位置坐下，看着窗外依依不舍地跟他挥手的Scott和满脸写着开心的妈妈，心里被郁闷填满了。他把头靠在窗上做忧郁美男子，感觉到有人在拍自己肩膀。他甩了甩肩膀，不想搭理身后猛戳他的人。</p>
+<p>今年是Sebastian来到美国的第三年。妈妈给他报名了一个夏令营，想让他多交些新朋友。</p>
+<p>作为一个罗马尼亚出生的男孩，Sebastian没去过夏令营，也不是很想去，但是暑假也没事干，他就接受了妈妈给他的安排去打发时间。</p>
+<p>上了车，Sebastian环顾了一周，大部分座位都已经被占了，又不想坐前面。他又看着这个金色的后脑勺，觉得这个人是不是瘫痪什么的，怎么被拍了这么长时间一点反应都没有。他凑到金头发旁边说：“我能坐你旁边吗？”</p>
+<p>突然有人在耳朵边上说话，Chris被吓了一大跳。他像兔子一样从座位上窜了起来，然后不出意外地撞上了行李架。他听到那个声音又说：“喂喂喂，你没事吧，出血了吗？”</p>
+<p>Chris觉得特别委屈，本来就不想来夏令营，还遇上这么个不知道什么毛病的人，凑到人家耳朵边上说话。他越想越委屈，放开了抱着头的手，想指责那人害他撞了头。</p>
+<p>Chris抬起头，对上了一双灰绿色的眼睛，一双他这辈子看过最好看的眼睛。他感觉胃里有无数只小蝴蝶在飞，心脏跳得特别快。</p>
+<p>他听到自己说：“你…你好，我叫Chris Evans。”</p>
+<p>那双绿眼睛弯成了月牙形，他模模糊糊地听到有个声音说：“你好，我叫Sebastian Stan，很高兴见到你。我能坐在你旁边吗？”</p>
+<p>Chris觉得他已经陷进Sebastian的眼睛里去了，丧失了语言功能。</p>
+<p>Sebastian觉得Chris挺好玩的，都已经疼出生理性泪水了，还能保持这么冷静。他笑了起来，对Chris指了指眼角。</p>
+<p>Chris看到Sebastian的笑容觉得他要从车窗掉出去了，心脏简直要从喉咙里蹦出来。然后他摸了摸Sebastian指的地方，一片湿润。</p>
+<p>我好蠢啊，Chris想。然后兴高采烈地让Sebastian跟他一起坐。</p>
+<hr>
+<p>桃Twitter转了别人去camp得到了初吻的推，应该也想跟seb这么初吻一次吧</p>
+
+      
+	</div>
+
+<div class="meta">
+	
+</div>
+</article>
+
+  <article class="post">
+	<h2 class="title">
+		<a href="2020/06/09/【桃包】不是男朋友啦/">不是男朋友啦</a>
+	</h2>
+    <div class="entry-content">
+    <div class="meta">
+      <div class="date">Published on: <time datetime="2020-06-09T04:42:50.219Z" itemprop="datePublished">Jun 9, 2020</time>
+</div>
+      <div class="tags">Tags: 
+
+<a href="/tags/桃包/">桃包</a>
+</div>
+    </div>
+      
+        <p>•包生日梗，今天突然想到的哈哈哈哈</p>
+<p>Chris刚挂断他跟世界上最甜蜜的小孩的视频，就接到了经纪人的电话，千叮咛万嘱咐他不要给Sebastian发生贺，再加上什么我好爱这个人啊，这个人好甜的配文。</p>
+<p>他皱着眉头说着好啊好啊地答应了经纪人，然后不爽的挂了电话。</p>
+<p>“可是他就是很甜啊……”Chris心里想，”为什么不让说。”</p>
+<p>Chris捧着手机倒在床上，打开Twitter，看到比平常多出一倍多的@，都是让他给Sebastian发生日快乐的。</p>
+<p>有一条说：“Chris Evans，给你男朋友发个生日快乐吧。”</p>
+<p>可是，已经不是男朋友了啊。</p>
+<p>Chris露出来大金毛一样的笑容，摸了摸左手无名指上的戒指。</p>
+<p>是未婚夫。</p>
+
+      
+	</div>
+
+<div class="meta">
+	
+</div>
+</article>
+
+  <article class="post">
+	<h2 class="title">
+		<a href="2020/06/09/如何教钢铁侠language的正确使用方式/">如何叫钢铁侠language的正确使用方法</a>
+	</h2>
+    <div class="entry-content">
+    <div class="meta">
+      <div class="date">Published on: <time datetime="2020-06-09T04:41:59.359Z" itemprop="datePublished">Jun 9, 2020</time>
+</div>
+      <div class="tags">Tags: 
+
+<a href="/tags/盾冬/">盾冬</a>
+</div>
+    </div>
+      
+        <p>沙雕段子<br>这是一个俄语的梗，空间看到的。<br>说是川普跟普京会谈的时候普京说了事实（Факт）这个词，听起来像骂人哈哈哈哈哈哈哈。</p>
+<hr>
+<p>美国队长没有一刻，比现在更恨九头蛇。</p>
+<p>他们显然没给巴基带来什么好东西，史蒂夫坚定的想，特别是语言这方面。</p>
+<p>他现在宁可再把叉骨和红骷髅从地狱里拖出来再打一遍，也不想面对巴基和托尼比“谁骂人更厉害”这种场面。</p>
+<p>在听了托尼大概有1400遍那个F打头的词之后，史蒂夫更烦躁的是，怎么能当着所有复仇者的面偏袒巴基。</p>
+<p>“新规定，F打头的词都被禁用了。”史蒂夫无视猎鹰的白眼，给了他的巴基一个灿烂的笑容。</p>
+<p>巴基思考了一小会，对史蒂夫笑了一下：“没问题</p>
+<p> Captain，保证完成任务。”</p>
+<p>托尼露出胜利者的表情：“那就是你认输了？”</p>
+<p>巴基用一个单词回答了他：“Факт.”</p>
+<p>这是一个标准的俄语发音，任何人都会这么说。但是史蒂夫发誓，它跟那个词听起来完全没有区别。</p>
+<p>娜塔莎笑得差点从沙发上掉下去，她拍着史蒂夫的肩膀说：“我的天啊队长，我可真喜欢我们的巴恩斯中士。”</p>
+<p>史蒂夫把俄国女特工的手拨下去，用美国队长教你做人的表情说：“对不起，是我的巴恩斯中士。”说俄语的时候性感到要死的鹿仔，正直的美国队长在心里补了一句。</p>
+
+      
+	</div>
+
+<div class="meta">
+	
+</div>
+</article>
+
+  <article class="post">
+	<h2 class="title">
+		<a href="2020/06/09/Bucky和Steve最近怪怪的【队长生贺，一发完】/">Bucky和Steve最近怪怪的</a>
+	</h2>
+    <div class="entry-content">
+    <div class="meta">
+      <div class="date">Published on: <time datetime="2020-06-09T04:36:53.046Z" itemprop="datePublished">Jun 9, 2020</time>
+</div>
+      <div class="tags">Tags: 
+
+<a href="/tags/盾冬/">盾冬</a>
+</div>
+    </div>
+      
+        <p>队三和无线战争之间</p>
+<p>轻微ooc</p>
+<hr>
+<p>Steve觉得Bucky最近怪怪的。</p>
+<p>他俩以前每天都视频，有的时候还会看看Bucky的小羊，但是这两周Bucky说有事，不能视频了。他跟特查拉联系了，确认过他没给Bucky安排任务。</p>
+<p>这就奇怪了，Bucky除了放羊，玩孩子，和被孩子玩还有什么事。难道是自己胡子太长，Bucky嫌弃自己不修边幅？</p>
+<p>Sam觉得队长最近怪怪的。</p>
+<p>每次去执行任务当义警的时候都心不在焉的，下手特别狠，每次都把人家打的鼻青脸肿的。</p>
+<p>直到，Steve满脸尴尬的来问他：“Sam，你说我应不应该刮胡子？Bucky不跟我视频，是不是不喜欢我的胡子？”</p>
+<p>Sam：“……Cap，你自己想刮就刮吧。反正你生日不是要到了吗，到时候你就说想跟Barnes过生日，去瓦坎达看他。”</p>
+<p>Steve恍然大悟：“谢谢你Sam。你能陪我去买身衣服吗，我还是想把自己打理干净再去见Bucky。”</p>
+<p>Sam表示可以但是心很累。</p>
+<p>特查拉觉得Bucky最近怪怪的。</p>
+<p>特别不好意思的问他要了一小块地和建筑材料，还问河边的小屋能不能给他，作为交换他可以给瓦坎达出任务。要知道这个人真的是一点也不喜欢说话，别人问话他也回的很简洁，主动开口的时候更是少之又少。</p>
+<p>特查拉很想问，但是还是克制住了自己的好奇心。</p>
+<p>因为没人能承受住美国队长的四倍吃醋功能。</p>
+<p>没有人。</p>
+<p>Sam陪着队长买衣服。</p>
+<p>他从来不知道男人买衣服还可以有这么多讲究。</p>
+<p>比如：“Bucky不喜欢这个颜色”，“Bucky不喜欢这个款式”，“Bucky不喜欢……”</p>
+<p>Sam实在忍不住了：“那你就光着去，Barnes肯定喜欢的不得了。”</p>
+<p>Steve轻轻皱眉：“Sam，你的脑子里怎么都是这些奇奇怪怪的东西？不要总想着……”</p>
+<p>今天的Sam也把队长自动屏蔽了。</p>
+<p>Steve总算是把衣服挑好了，自己一个人坐上了昆式去了瓦坎达。</p>
+<p>他有一点点紧张，毕竟第一次穿西装去见喜欢的人，他担心Bucky会不喜欢。</p>
+<p>Steve捧着一把从路边摘的花，慢慢走到Bucky的河边小屋。</p>
+<p>他发现这个小屋不一样了。不那么小了，风格也没有那么瓦坎达了。有点像……他们在布鲁克林的家。</p>
+<p>他听到了身后的脚步声。</p>
+<p>Steve转过头，看到了一身军装的Bucky。帽子还是不好好戴，腰被腰带束的很有型。</p>
+<p>Bucky轻笑了一声：“Punk.”</p>
+<p>Steve也笑了起来：“Jerk.”</p>
+<p>他们紧紧的拥抱彼此，就像这辈子都不要再分离。</p>
+<p>Fin.</p>
+<hr>
+<p>以下是不负责任的小剧场</p>
+<p>Sam和Natasha藏在昆式战记的一个箱子里。</p>
+<p>非常闷。</p>
+<p>他们跟来是因为好奇队长和Barnes的进展，但是意外的被困住了。</p>
+<p>Sam：“准备好了吗？”</p>
+<p>Nat：“来吧。”</p>
+<p>空旷的草地上传来了“啊啊啊啊啊救命啊”的声音。</p>
+<p>特查拉很好奇队长和白狼要干什么，所以穿上战衣摸黑去看八卦。</p>
+<p>然后就被突如其来的土拨鼠叫了个半死。</p>
+<p>特查拉把Sam和Nat人救了出来，一起去看八卦。</p>
+<p>Steve和Bucky躺在草坪上说话。</p>
+<p>Steve：“瓦坎达的星星真好看，纽约就不行了，高楼大厦太多，晚上都看不清天空了。”</p>
+<p>Bucky：“回来这么长时间，我还没回过纽约。”</p>
+<p>Steve：“……你是不是有什么想说的。”</p>
+<p>Bucky：“一起说。”</p>
+<p>Steve：“你该洗头发了。”</p>
+<p>Bucky：“你该刮胡子了。”</p>
+<p>远处什么也听不清三人组只看到本来和谐的两个人突然扭打起来。</p>
+<p>特查拉想拉架，被Sam拦住了。</p>
+<p>Sam：“情趣，情趣。”</p>
+<p>然后就拉着Nat和国王陛下窜到了马上要亲到Bucky的Steve面前。</p>
+<p>Bucky看了Nat一眼：“你们既然有时间染头发，你为什么不刮胡子。”</p>
+<p>Sam看着队长的眼神，觉得自己可能死了。</p>
+<p>Tony一个人坐在布鲁克林的一处房子里。看着盛大的烟火，手里攥着充满电的翻盖手机。</p>
+<p>挣扎了一会，他发了条短信过去：Happy Birthday and fuck you.</p>
+<p>手机震了一下。</p>
+<p>Thank you Tony and language.</p>
+<hr>
+<p>哈哈哈哈没想到小剧场写的跟正文基本一样长。</p>
+<p>这就是队长最好的生活了吧我想，朋友和亲人都在身边。</p>
+<p>最后写Tony真的没有盾铁的意思，仅仅是因为Tony是队长的朋友，仅此而已。</p>
+<p>最后祝我最最最最爱的百岁老人Steve一百岁生快。</p>
+
+      
+	</div>
+
+<div class="meta">
+	
+</div>
+</article>
+
+
+
+    </div>
+    <footer id="footer">
+    <div style="display:inline">
+    Copyright &copy; 2020
+
+    南瓜
+. Powered by <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> |
+    Theme is <a href="https://github.com/wd/hexo-fabric" target="_blank" rel="noopener">hexo-fabric</a>, fork from <a href="http://github.com/panks/fabric" target="_blank" rel="noopener">fabric</a> by <a href="http://panks.me" target="_blank" rel="noopener">Pankaj Kumar</a>
 </div>
 
-<!-- Footer -->
-<!-- Footer -->
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 text-center">
-                <br>
-                <ul class="list-inline text-center">
-                
-                
-                
 
-                
-
-                
-
-                
-
-                
-
-                </ul>
-                <p class="copyright text-muted">
-                    Copyright &copy; 南瓜的博客 2020
-                    <br>
-                    <span id="busuanzi_container_site_pv" style="font-size: 12px;">PV: <span id="busuanzi_value_site_pv"></span> Times</span>
-                    <br>
-                    Theme by <a href="https://haojen.github.io/" target="_blank" rel="noopener">Haojen Ma</a>
-                </p>
-
-            </div>
-        </div>
-    </div>
-</footer>
-
-<!-- jQuery -->
-
-<script src="/js/jquery.min.js"></script>
-
-
-<!-- Bootstrap Core JavaScript -->
-
-<script src="/js/bootstrap.min.js"></script>
-
-
-<!-- Custom Theme JavaScript -->
-
-<script src="/js/blog.js"></script>
-
-
-<!-- async load function -->
-<script>
-    function async(u, c) {
-      var d = document, t = 'script',
-          o = d.createElement(t),
-          s = d.getElementsByTagName(t)[0];
-      o.src = u;
-      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
-      s.parentNode.insertBefore(o, s);
-    }
-</script>
-
-<!-- jquery.tagcloud.js -->
-<script>
-    // only load tagcloud.js in tag.html
-    if($('#tag_cloud').length !== 0){
-        async("https://axionpumpkin.github.io/js/jquery.tagcloud.js",function(){
-            $.fn.tagcloud.defaults = {
-                //size: {start: 1, end: 1, unit: 'em'},
-                color: {start: '#bbbbee', end: '#0085a1'},
-            };
-            $('#tag_cloud a').tagcloud();
-        })
-    }
-</script>
-
-<!--fastClick.js -->
-<script>
-    async("//cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
-        var $nav = document.querySelector("nav");
-        if($nav) FastClick.attach($nav);
-    })
-</script>
-
-
-
-<!-- Google Analytics -->
-
-
-
-<!-- Baidu Tongji -->
-
-
-<!-- swiftype -->
+    </footer>
+    <script src="/javascripts/fabric.js"></script>
+<script src="/javascripts/jquery.fancybox.pack.js"></script>
 <script type="text/javascript">
-  (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
-  (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
-  e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
-  })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
-
-  _st('install','','2.0.0');
+(function($){
+	$('.fancybox').fancybox();
+})(jQuery);
 </script>
+ <!-- Delete or comment this line to disable Fancybox -->
 
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 
-<!--wechat title img-->
-<img class="wechat-title-img" src="">
+
+<!-- end toload --> 
+</div>
+</div>
+<script src="/javascripts/jquery.ui.totop.js" type="text/javascript"></script>
+<script type="text/javascript">
+/*<![CDATA[*/
+;(function($){$().UItoTop({easingType:'easeOutCirc'});})(jQuery); 
+/*]]>*/
+</script><!-- remove it to remove the scroll to top button -->
 </body>
-
 </html>

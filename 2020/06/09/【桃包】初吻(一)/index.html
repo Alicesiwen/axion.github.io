@@ -1,20 +1,419 @@
-extends base
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 4.2.1">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
 
-block nav
-    - var pageName = "POST"
-    include _partial/menu
+<link rel="stylesheet" href="/css/main.css">
 
-block header
-    - var pageHeader = page.title
-    include _partial/body_header
 
-block content
-    div.body__content
-        if page.tags.length > 0
-            div.body__item.post_tags
-                for tag in page.tags.toArray()
-                    a(href=url_for(tag.path) class="post_tag")= tag.name
-        if page.content.length > 0
-            div.body__item
-                != page.more
-    div#disqus_thread
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"axionpumpkin.github.io","root":"/","scheme":"Muse","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
+  </script>
+
+  <meta name="description" content="第一章*大概ooc Chris十五岁的夏天，他妈妈决定让他自己去夏令营。 在每个小孩的暑假里，夏令营大概是最好玩的事情。既不用听爸妈唠叨，还能跟朋友一起住一起玩，简直不能再美妙。但是Chris一点也不喜欢，一点也不。 每年Chris都觉得，今年的夏令营一定很好玩，自己绝对没问题，然后百分之百会在路上哭闹着要回家。 Chris觉得有点委屈，太过于恋家又不是他的错，家里有弟弟可以欺负，饭菜也好吃，去夏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="初吻">
+<meta property="og:url" content="https://axionpumpkin.github.io/2020/06/09/%E3%80%90%E6%A1%83%E5%8C%85%E3%80%91%E5%88%9D%E5%90%BB(%E4%B8%80)/index.html">
+<meta property="og:site_name" content="南瓜的博客">
+<meta property="og:description" content="第一章*大概ooc Chris十五岁的夏天，他妈妈决定让他自己去夏令营。 在每个小孩的暑假里，夏令营大概是最好玩的事情。既不用听爸妈唠叨，还能跟朋友一起住一起玩，简直不能再美妙。但是Chris一点也不喜欢，一点也不。 每年Chris都觉得，今年的夏令营一定很好玩，自己绝对没问题，然后百分之百会在路上哭闹着要回家。 Chris觉得有点委屈，太过于恋家又不是他的错，家里有弟弟可以欺负，饭菜也好吃，去夏">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2020-06-09T04:44:09.853Z">
+<meta property="article:modified_time" content="2020-06-17T06:17:25.241Z">
+<meta property="article:author" content="南瓜">
+<meta property="article:tag" content="桃包">
+<meta name="twitter:card" content="summary">
+
+<link rel="canonical" href="https://axionpumpkin.github.io/2020/06/09/%E3%80%90%E6%A1%83%E5%8C%85%E3%80%91%E5%88%9D%E5%90%BB(%E4%B8%80)/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'en'
+  };
+</script>
+
+  <title>初吻 | 南瓜的博客</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="Toggle navigation bar">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">南瓜的博客</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">Axion's Blog</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>Home</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives</a>
+
+  </li>
+  </ul>
+</nav>
+
+
+
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="en">
+    <link itemprop="mainEntityOfPage" href="https://axionpumpkin.github.io/2020/06/09/%E3%80%90%E6%A1%83%E5%8C%85%E3%80%91%E5%88%9D%E5%90%BB(%E4%B8%80)/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="南瓜">
+      <meta itemprop="description" content="Just a place for writing.">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="南瓜的博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          初吻
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">Posted on</span>
+
+              <time title="Created: 2020-06-09 00:44:09" itemprop="dateCreated datePublished" datetime="2020-06-09T00:44:09-04:00">2020-06-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2020-06-17 02:17:25" itemprop="dateModified" datetime="2020-06-17T02:17:25-04:00">2020-06-17</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%88%9D%E5%90%BB/" itemprop="url" rel="index"><span itemprop="name">初吻</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <h2 id="第一章"><a href="#第一章" class="headerlink" title="第一章"></a>第一章</h2><p>*大概ooc</p>
+<p>Chris十五岁的夏天，他妈妈决定让他自己去夏令营。</p>
+<p>在每个小孩的暑假里，夏令营大概是最好玩的事情。既不用听爸妈唠叨，还能跟朋友一起住一起玩，简直不能再美妙。但是Chris一点也不喜欢，一点也不。</p>
+<p>每年Chris都觉得，今年的夏令营一定很好玩，自己绝对没问题，然后百分之百会在路上哭闹着要回家。</p>
+<p>Chris觉得有点委屈，太过于恋家又不是他的错，家里有弟弟可以欺负，饭菜也好吃，去夏令营一点意义都没有。但是一个十五岁的男子汉不能向妈妈哭鼻子，求她让自己待在家里，Chris只好收拾好行李，气鼓鼓地准备去夏令营待上半个月。</p>
+<p>Chris登上了巴士。一点也不开心，他想，在家睡觉都比去夏令营好玩。他挑了一个窗边的位置坐下，看着窗外依依不舍地跟他挥手的Scott和满脸写着开心的妈妈，心里被郁闷填满了。他把头靠在窗上做忧郁美男子，感觉到有人在拍自己肩膀。他甩了甩肩膀，不想搭理身后猛戳他的人。</p>
+<p>今年是Sebastian来到美国的第三年。妈妈给他报名了一个夏令营，想让他多交些新朋友。</p>
+<p>作为一个罗马尼亚出生的男孩，Sebastian没去过夏令营，也不是很想去，但是暑假也没事干，他就接受了妈妈给他的安排去打发时间。</p>
+<p>上了车，Sebastian环顾了一周，大部分座位都已经被占了，又不想坐前面。他又看着这个金色的后脑勺，觉得这个人是不是瘫痪什么的，怎么被拍了这么长时间一点反应都没有。他凑到金头发旁边说：“我能坐你旁边吗？”</p>
+<p>突然有人在耳朵边上说话，Chris被吓了一大跳。他像兔子一样从座位上窜了起来，然后不出意外地撞上了行李架。他听到那个声音又说：“喂喂喂，你没事吧，出血了吗？”</p>
+<p>Chris觉得特别委屈，本来就不想来夏令营，还遇上这么个不知道什么毛病的人，凑到人家耳朵边上说话。他越想越委屈，放开了抱着头的手，想指责那人害他撞了头。</p>
+<p>Chris抬起头，对上了一双灰绿色的眼睛，一双他这辈子看过最好看的眼睛。他感觉胃里有无数只小蝴蝶在飞，心脏跳得特别快。</p>
+<p>他听到自己说：“你…你好，我叫Chris Evans。”</p>
+<p>那双绿眼睛弯成了月牙形，他模模糊糊地听到有个声音说：“你好，我叫Sebastian Stan，很高兴见到你。我能坐在你旁边吗？”</p>
+<p>Chris觉得他已经陷进Sebastian的眼睛里去了，丧失了语言功能。</p>
+<p>Sebastian觉得Chris挺好玩的，都已经疼出生理性泪水了，还能保持这么冷静。他笑了起来，对Chris指了指眼角。</p>
+<p>Chris看到Sebastian的笑容觉得他要从车窗掉出去了，心脏简直要从喉咙里蹦出来。然后他摸了摸Sebastian指的地方，一片湿润。</p>
+<p>我好蠢啊，Chris想。然后兴高采烈地让Sebastian跟他一起坐。</p>
+<hr>
+<p>桃Twitter转了别人去camp得到了初吻的推，应该也想跟seb这么初吻一次吧</p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E6%A1%83%E5%8C%85/" rel="tag"># 桃包</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2020/06/09/%E3%80%90%E6%A1%83%E5%8C%85%E3%80%91%E4%B8%8D%E6%98%AF%E7%94%B7%E6%9C%8B%E5%8F%8B%E5%95%A6/" rel="prev" title="不是男朋友啦">
+      <i class="fa fa-chevron-left"></i> 不是男朋友啦
+    </a></div>
+      <div class="post-nav-item"></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          Table of Contents
+        </li>
+        <li class="sidebar-nav-overview">
+          Overview
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章"><span class="nav-number">1.</span> <span class="nav-text">第一章</span></a></li></ol></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name">南瓜</p>
+  <div class="site-description" itemprop="description">Just a place for writing.</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-name">posts</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">categories</span>
+      </div>
+      <div class="site-state-item site-state-tags">
+        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-name">tags</span>
+      </div>
+  </nav>
+</div>
+
+
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">南瓜</span>
+</div>
+  <div class="powered-by">Powered by <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://muse.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a>
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/muse.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+
+</body>
+</html>
